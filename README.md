@@ -23,7 +23,7 @@ Add the VuePress plugin in your site or theme config file. The configuration is 
 ```js
 module.exports = {
   plugins: [
-    ['plausible', {domain: 'your-domain.com'}]
+    'plausible': { domain: 'your-domain.com' },
 
     // other plugins
     // ...
