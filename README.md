@@ -31,9 +31,9 @@ module.exports = {
 }
 ```
 
-For more details on how to work with VuePress plugins check the [official docs](https://vuepress.vuejs.org/plugin/using-a-plugin.html).
+For more details on how to work with VuePress plugins check out the [official docs](https://vuepress.vuejs.org/plugin/using-a-plugin.html).
 
 
 ## License
 
-This package is release under the MIT license by [Peter Thaleikis](https://peterthaleikis.com).
+This package is released under the MIT license by [Peter Thaleikis](https://peterthaleikis.com).
