@@ -1,15 +1,19 @@
-const { path } = require('@vuepress/shared-utils')
+const { path } = require("@vuepress/shared-utils");
 
 module.exports = (options = {}, context) => ({
-  define () {
-    const { siteConfig = {} } = context
-    const domain = options.domain || siteConfig.domain
-    const DOMAIN = domain || false
+  define() {
+    const { siteConfig = {} } = context;
+    const domain = options.domain || siteConfig.domain;
+    const outboundLinkTracking =
+      options.outboundLinkTracking || siteConfig.outboundLinkTracking;
+    const DOMAIN = domain || false;
+    const OUTBOUND_LINKS = outboundLinkTracking || false;
 
-    return { DOMAIN }
+    return { DOMAIN, OUTBOUND_LINKS };
   },
 
   enhanceAppFiles: [
-    path.resolve(__dirname, 'inject.js')
-  ]
-})
+    path.resolve(__dirname, "inject.js"),
+    path.resolve(__dirname, "inject-outbound-link-tracking.js"),
+  ],
+});
