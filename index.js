@@ -12,8 +12,5 @@ module.exports = (options = {}, context) => ({
     return { DOMAIN, OUTBOUND_LINKS };
   },
 
-  enhanceAppFiles: [
-    path.resolve(__dirname, "inject.js"),
-    path.resolve(__dirname, "inject-outbound-link-tracking.js"),
-  ],
+  enhanceAppFiles: [path.resolve(__dirname, "inject.js")],
 });
