@@ -33,6 +33,21 @@ module.exports = {
 }
 ```
 
+### Outbound link tracking
+
+Plausible can also [track all outbound links](https://plausible.io/docs/outbound-link-click-tracking). To enable outbound link tracking with this extension, do this instead of the above:
+
+```js
+module.exports = {
+  plugins: {
+    'plausible': { domain: 'your-domain.com', outboundLinkTracking: true },
+
+    // other plugins
+    // ...
+  }
+}
+```
+
 For more details on how to work with VuePress plugins, check out the [official docs](https://vuepress.vuejs.org/plugin/using-a-plugin.html).
 
 
