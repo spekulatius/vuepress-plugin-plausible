@@ -8,7 +8,7 @@ module.exports = (options = {}, context) => ({
     const outboundLinkTracking =
       options.outboundLinkTracking || siteConfig.outboundLinkTracking;
     
-    const SELF_HOSTED_URL = selfHostedUrl || false;
+    const SELF_HOSTED_URL = selfHostedUrl || "https://plausible.io";
     const DOMAIN = domain || false;
     const OUTBOUND_LINKS = outboundLinkTracking || false;
 
