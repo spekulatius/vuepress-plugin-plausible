@@ -12,9 +12,13 @@ export default ({ router }) => {
       var d = document,
         g = d.createElement("script"),
         s = d.getElementsByTagName("script")[0];
-      var h = OUTBOUND_LINKS
-        ? SELF_HOSTED_URL + "/js/plausible.outbound-links.js"
-        : SELF_HOSTED_URL + "/js/plausible.js";
+      
+      
+      const plausibleUrl = SELF_HOSTED_URL  || 'https://plausible.io'
+
+      const h = OUTBOUND_LINKS
+        ? `${plausibleUrl}/js/plausible.outbound-links.js`
+        : `${plausibleUrl}/js/plausible.js`
 
       g.setAttribute("data-domain", DOMAIN);
       g.async = true;
